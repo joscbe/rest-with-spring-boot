@@ -1,11 +1,11 @@
 package br.com.joscbe.utils;
 
-import br.com.joscbe.exception.UnsupportedMathOperationException;
+//import br.com.joscbe.exception.UnsupportedMathOperationException;
 
 public class NumberUtils {
 
-    public static Double convertToDouble(String strNumber) {
-        if(strNumber == null || strNumber.isEmpty()) throw new UnsupportedMathOperationException("please set a numeric value");
+    public static Double convertToDouble(String strNumber) throws Exception {
+        if(strNumber == null || strNumber.isEmpty()) throw new Exception("please set a numeric value");
         String number = strNumber.replace(",", ".");
         return Double.parseDouble(number);
     }

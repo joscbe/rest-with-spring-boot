@@ -1,1 +1,15 @@
-spring.application.name=rest-with-spring-boot
+spring:
+  application:
+    name: rest-with-spring-boot
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/meu_banco?useTimezone=true&serverTimezone=UTC
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+    show-sql: false
+    open-in-view: false
